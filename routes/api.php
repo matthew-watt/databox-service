@@ -19,3 +19,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 // List Object Templates
 Route::get('templates', 'ObjectTemplateController@index');
+
+// Upload a file (not yet processed: processing is done on /upload/<file_id>)
+Route::post('file', 'FileController@store');
+
+Route::get('file', 'FileController@index');
