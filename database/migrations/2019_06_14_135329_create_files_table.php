@@ -16,7 +16,7 @@ class CreateFilesTable extends Migration
         Schema::create('files', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->text('content');
+            $table->text('content'); // <- json .. check json types
             $table->timestamps();
         });
     }

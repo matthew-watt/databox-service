@@ -41,12 +41,7 @@ class FileController extends Controller
     {
         $json = $request->json()->all();
         Log::debug($json);
-
-        // http -> storage (s3, ..)
-
-        // ...
-
-        // database
+        // database - only the file, object definitions are a separate request
         $file = new File();
         $file->name = $json['name'];
         $file->content = $json['content'];
